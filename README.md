@@ -3,7 +3,7 @@ may-i-paste
 
 iTerm なので、ペーストする際に「改行」が含まれていたら確認ダイアログを表示する Applescript です。
 
-![](http://direct_public_image_url)
+![dialog](dialog.png)
 
 ## セットアップ方法
 ちょっとめんどくさいです。
@@ -42,3 +42,7 @@ cp may-i-paste/Paste.scpt ~/Library/Application\ Support/iTerm/Scripts/
 ## 使い方
 `⌘V` するだけ。クリップボードないのテキストに「改行」が含まれていた場合は、確認のダイアログが表示されます。
 「改行」がない場合は、そのまま貼付けられます。
+
+## 補足
+ダイアログを使用せずに貼付けたい場合は、`⌘P` を。
+`Paste.scpt` を変更すれば、⌘P と ⌘V を入れ替えることも、他のショートカットも使うことができます。
