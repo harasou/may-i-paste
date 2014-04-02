@@ -18,10 +18,13 @@ git clone git@github.com:harasou/may-i-paste.git
 
    ```
 mkdir -p ~/Library/Application\ Support/iTerm/Scripts
-cp may-i-paste/Paste.scpt ~/Library/Application\ Support/iTerm/Scripts/
+cd may-i-paste
+ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scpt
+# cp でも OK
 ```
 
-1. iTerm を再起動。再起動するとメニューに「Script」が表示される。
+1. iTerm のメニュー「Script」から Refresh を選択(Scriptメニューがない場合は、iTerm2 を再起動する)
+   Refresh すると Script メニューの中に「Paste.scpt」が表示される。
 
 1. システム環境設定から iTerm のショートカットを登録
    1. シスムて環境設定　▶︎　キーボード　▶︎　ショートカット

@@ -1,15 +1,20 @@
-set theLF to ASCII character 10
 set theCr to ASCII character 13
-set strOfClip to get the clipboard
 
-if strOfClip contains theCr then
-  display dialog "May I Paste ?" buttons {"Yes", "No"} default button 2 default answer strOfClip
-  set ret to result
-  set button_returned to button returned of ret
-  if button_returned is "Yes" then
-    set the clipboard to text returned of ret
+set strClip to get the clipboard
+set ind to offset of theCr in strClip
+set len to length of strClip
+
+if ind > 0 then
+  if ind = len then
+    set the clipboard to characters 1 thru (len - 1) of strClip as text
   else
-    exit repeat
+    display dialog "May I Paste ?" buttons {"Yes", "No"} default button 2 default answer strClip
+    set ret to result
+    if button returned of ret is "Yes" then
+      set the clipboard to text returned of ret
+    else
+      error number -128
+    end if
   end if
 end if
 
