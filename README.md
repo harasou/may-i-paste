@@ -1,7 +1,7 @@
 may-i-paste
 ===========
 
-iTerm などで、ペーストする際に「改行」が含まれていたら確認ダイアログを表示する Applescript です。
+iTerm で、ペーストする際に「改行」が含まれていたら確認ダイアログを表示する Applescript です。
 
 ![dialog](dialog.png)
 
@@ -14,7 +14,7 @@ iTerm などで、ペーストする際に「改行」が含まれていたら�
 git clone git@github.com:harasou/may-i-paste.git
 ```
 
-1. iTerm の Script ディレクトリ配下に設置
+1. iTerm の Script ディレクトリ配下に`Paste.scpt`を設置
 
    ```
 mkdir -p ~/Library/Application\ Support/iTerm/Scripts
@@ -23,8 +23,9 @@ ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scp
 # cp でも OK
 ```
 
-1. iTerm のメニュー「Script」から Refresh を選択(Scriptメニューがない場合は、iTerm2 を再起動する)
-   Refresh すると Script メニューの中に「Paste.scpt」が表示される。
+1. iTerm の Scriptメニューから Refresh を選択 (Scriptメニューがない場合は、iTerm を再起動する)
+
+   Refresh すると Scriptメニューの中に「Paste.scpt」が表示される。
 
 1. システム環境設定から iTerm のショートカットを登録
    1. システム環境設定　▶︎　キーボード　▶︎　ショートカット
@@ -44,8 +45,12 @@ ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scp
 
 ## 使い方
 `⌘V` するだけ。クリップボード内のテキストに「改行」が含まれていた場合は、確認のダイアログが表示されます。
-「改行」がない場合は、そのまま貼付けられます。
+
+なお以下の場合は、ダイアログが表示されずに、そのまま貼付けられます。
+- クリップボード内のテキストに「改行」がない場合
+- クリップボード内のテキストが１行しかなく、行末に「改行」がある場合（行末の改行は取り除かれます）
+- `⌘P`で貼付けた場合
 
 ## 補足
-ダイアログを使用せずに貼付けたい場合は、`⌘P` を。
-`Paste.scpt` を変更すれば、⌘P と ⌘V を入れ替えることも、他のショートカットも使うことができます。
+- ダイアログ内の「OK」「Cancel」ボタンが、`tab`キーで選択出来ない場合は、`Control` + `F7` を一度押した後
+   試してください。
