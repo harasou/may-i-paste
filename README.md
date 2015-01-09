@@ -35,7 +35,7 @@ ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scp
        ```
        アプリケーション：iTerm
        メニュータイトル：Paste
-       キーボードショートカット：⌘P
+       キーボードショートカット：⌘\
        ```
        ```
        アプリケーション：iTerm
@@ -49,7 +49,7 @@ ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scp
 なお以下の場合は、ダイアログが表示されずに、そのまま貼付けられます。
 - クリップボード内のテキストに「改行」がない場合
 - クリップボード内のテキストが１行しかなく、行末に「改行」がある場合（行末の改行は取り除かれます）
-- `⌘P`で貼付けた場合
+- `⌘\`で貼付けた場合
 
 ## 補足
 - ダイアログ内の「OK」「Cancel」ボタンが、`tab`キーで選択出来ない場合は、`Control` + `F7` を一度押した後

@@ -19,5 +19,5 @@ if ind > 0 then
 end if
 
 tell application "System Events"
-  keystroke "p" using command down
+  keystroke "\\" using command down
 end tell
