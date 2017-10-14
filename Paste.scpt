@@ -13,7 +13,7 @@ if ind > 0 then
     if button returned of ret is "Yes" then
       set pasteString to text returned of ret
     else
-      error number -128
+      return
     end if
   end if
 else
