@@ -11,17 +11,17 @@ iTerm で、ペーストする際に「改行」が含まれていたら確認�
 1. 適当なディレクトリで git clone
 
    ```
-git clone git@github.com:harasou/may-i-paste.git
-```
+   git clone git@github.com:harasou/may-i-paste.git
+   ```
 
 1. iTerm の Script ディレクトリ配下に`Paste.scpt`を設置
 
    ```
-mkdir -p ~/Library/Application\ Support/iTerm/Scripts
-cd may-i-paste
-ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scpt
-# cp でも OK
-```
+   mkdir -p ~/Library/Application\ Support/iTerm/Scripts
+   cd may-i-paste
+   ln -s "$(pwd)/Paste.scpt" ~/Library/Application\ Support/iTerm/Scripts/Paste.scpt
+   # cp でも OK
+   ```
 
 1. iTerm の Scriptメニューから Refresh を選択 (Scriptメニューがない場合は、iTerm を再起動する)
 
